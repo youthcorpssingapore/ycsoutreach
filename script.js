@@ -24,7 +24,7 @@ const quizQuestions = [
     background: "linear-gradient(135deg, rgba(179, 32, 42, 0.2), rgba(220, 80, 90, 0.15)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><circle cx=%22100%22 cy=%22100%22 r=%2280%22 fill=%22%23fff6f6%22/><text x=%22100%22 y=%22120%22 text-anchor=%22middle%22 font-size=%2240%22>🎉</text></svg>')",
     options: [
       { text: "I introduce myself to people and try to get to know them", type: "C" },
-      { text: "I pick up a game and tryto get everyone involved", type: "LD" },
+      { text: "I pick up a game and try to get everyone involved", type: "LD" },
       { text: "I quietly observe the vibe before deciding how to engage", type: "L" },
       { text: "I try to ask if there is any help needed setting up", type: "V" },
     ],
@@ -43,7 +43,7 @@ const quizQuestions = [
     question: "You just discovered a cause or issue you really care about. What's your first move?",
     background: "linear-gradient(135deg, rgba(179, 32, 42, 0.2), rgba(220, 80, 90, 0.15)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><text x=%22100%22 y=%22110%22 text-anchor=%22middle%22 font-size=%2260%22>💡</text></svg>')",
     options: [
-      { text: "I look for concrete next steps so I can do somethingabout it right away", type: "V" },
+      { text: "I look for concrete next steps so I can do something about it right away", type: "V" },
       { text: "I start thinking about how I could organise something around it", type: "LD" },
       { text: "I share it with my friends and get them talking about it too", type: "C" },
       { text: "I read articles, watch videos, and try to understand it further", type: "L" },
@@ -161,7 +161,7 @@ const pillarProgrammes = {
     url: "https://youthcorps.nyc.gov.sg/lead",
   },
   C: {
-    label: "Check out how you can start doing good!",
+    label: "Check out how you can start connecting with more!",
     url: "https://youthcorps.nyc.gov.sg/connect",
   },
 };
