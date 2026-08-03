@@ -166,7 +166,7 @@ const pillarProgrammes = {
   },
 };
 
-const volunteeringJourneyUrl = "https://discover.nyc.gov.sg/civicaction";
+const volunteeringJourneyUrl = "https://discover.nyc.gov.sg/civicaction/Join-Opportunities";
 
 function showPage(pageToShow) {
   landingPage.classList.toggle("hidden", pageToShow !== "landing");
