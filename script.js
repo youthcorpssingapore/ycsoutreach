@@ -25,7 +25,7 @@ const quizQuestions = [
     options: [
       { text: "I introduce myself to people and try to get to know them", type: "C" },
       { text: "I pick up a game and tryto get everyone involved", type: "LD" },
-      { text: "I find a quietly observe the vibe before deciding how to engage", type: "L" },
+      { text: "I quietly observe the vibe before deciding how to engage", type: "L" },
       { text: "I try to ask if there is any help needed setting up", type: "V" },
     ],
   },
