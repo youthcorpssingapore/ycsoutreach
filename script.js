@@ -144,6 +144,29 @@ const questionBackground = document.getElementById("question-background");
 const logoImage = document.getElementById("logo-image");
 const redBoxImage = document.getElementById("red-box-image");
 const restartButton = document.getElementById("restart-button");
+const pillarProgrammeButton = document.getElementById("pillar-programme-button");
+const volunteeringJourneyButton = document.getElementById("volunteering-journey-button");
+
+const pillarProgrammes = {
+  L: {
+    label: "Check out our various learning programmes!",
+    url: "https://youthcorps.nyc.gov.sg/learn",
+  },
+  V: {
+    label: "Check out our various volunteering programmes!",
+    url: "https://youthcorps.nyc.gov.sg/volunteer",
+  },
+  LD: {
+    label: "Check out our various leadership programmes!",
+    url: "https://youthcorps.nyc.gov.sg/lead",
+  },
+  C: {
+    label: "Check out how you can start doing good!",
+    url: "https://youthcorps.nyc.gov.sg/connect",
+  },
+};
+
+const volunteeringJourneyUrl = "https://discover.nyc.gov.sg/civicaction";
 
 function showPage(pageToShow) {
   landingPage.classList.toggle("hidden", pageToShow !== "landing");
@@ -240,9 +263,16 @@ function calculateResult() {
 function renderResult() {
   const { topTypes, counts } = calculateResult();
   const profile = resultProfiles[topTypes[0]];
+  const primaryType = topTypes[0];
+  const pillarProgramme = pillarProgrammes[primaryType] ?? pillarProgrammes.L;
 
   quizCard.classList.add("hidden");
   resultCard.classList.remove("hidden");
+
+  if (pillarProgrammeButton) {
+    pillarProgrammeButton.textContent = pillarProgramme.label;
+    pillarProgrammeButton.dataset.url = pillarProgramme.url;
+  }
 
   if (topTypes.length === 1) {
     resultTitle.textContent = profile.title;
@@ -385,6 +415,22 @@ if (shareButton) {
     }
   });
 }
+
+if (pillarProgrammeButton) {
+  pillarProgrammeButton.addEventListener("click", () => {
+    const targetUrl = pillarProgrammeButton.dataset.url;
+    if (targetUrl) {
+      window.open(targetUrl, "_blank", "noopener,noreferrer");
+    }
+  });
+}
+
+if (volunteeringJourneyButton) {
+  volunteeringJourneyButton.addEventListener("click", () => {
+    window.open(volunteeringJourneyUrl, "_blank", "noopener,noreferrer");
+  });
+}
+
 optionsForm.addEventListener("click", (event) => {
   const button = event.target.closest(".option-button");
   if (!button) {
